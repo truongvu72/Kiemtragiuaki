@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2021 at 04:49 PM
+-- Generation Time: Aug 24, 2021 at 09:42 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.32
 
@@ -40,8 +40,11 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id`, `username`, `email`, `password`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin'),
-(2, 'admin1', '123@gmail.com', '123');
+(3, 'admin', 'admin@tlu.vn', '123'),
+(4, 'admin1', 'admin1@tlu.vn', '1233'),
+(5, 'truongtlu', 'truong@tlu.edu..vn', '111'),
+(6, 'admin6', 'admin6@tlu.vn', '6'),
+(7, 'admin7', 'admin7@tlu.vn', '7');
 
 -- --------------------------------------------------------
 
@@ -67,7 +70,6 @@ CREATE TABLE `tbl_giangvien` (
 
 INSERT INTO `tbl_giangvien` (`id`, `parent_id`, `hovaten`, `email`, `sdt`, `bomon`, `chucvu`, `mota`, `thumbnail`) VALUES
 (1, 1, 'Kieu Tuan Dung(ThS.)', 'dungkt@tlu.edu.vn', 1345, 'Công nghệ Web', 'Trưởng khoa', 'abc', 'http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg'),
-(12, 0, 'Nguyen Huu Quynh(PGS.TS)', 'quynhnh@tlu.edu.vn', 2258522, 'Học Máy', 'Giám đốc TTTH kiêm Phó trưởng khoa CNTT', 'Người đi đầu trong việc xây dựng khoa CNTT trường ', 'http://cse.tlu.edu.vn/Portals/0/Nguyen%20Huu%20Quynh.jpg'),
 (29, 9, 'Nguyen Thanh Tung(PGS.Ts)', 'ntt@tlu.vn', 1123644, 'toán tin', 'Trưởng Khoa', 'dep trai', 'http://cse.tlu.edu.vn/Portals/0/Images/2016/Tung%20VIASM.jpg'),
 (33, 4, 'Nguyen Huu Quynh(PGS.TS)', 'quynhnh@tlu.edu.vn', 2258522, 'Học Máy', 'Giám đốc TTTH kiêm Phó trưởng khoa CNTT', 'Người đi đầu trong việc xây dựng khoa CNTT trường ', 'http://cse.tlu.edu.vn/Portals/0/Nguyen%20Huu%20Quynh.jpg'),
 (34, 5, 'Ly Anh Tuan(TS.)', 'lat@tlu.edu.vn', 225822312, 'Công Nghệ Phần Mềm', ' trưởng bộ môn', 'Người đi đầu trong việc xây dựng khoa CNTT trường ', 'http://cse.tlu.edu.vn/Portals/0/Users/Ly_Anh_Tuan.jpg');
@@ -90,9 +92,12 @@ CREATE TABLE `tbl_khoa` (
 --
 
 INSERT INTO `tbl_khoa` (`id`, `tenkhoa`, `maytruc`, `diachi`) VALUES
-(1, 'CNTT', '0148484', '175 Tây Sơn'),
-(2, 'Khoa Công Trình', '123456987', '175 Tây Sơn'),
-(3, 'Khoa Cơ Khí', '145266987', '175 Tây Sơn');
+(3, 'Khoa Cơ Khí', '145266987', '175 Tây Sơn'),
+(4, 'Khoa Cơ Khí', '124.125.126', '175 Tây Sơn'),
+(5, 'Khoa CNTT', '124.147.858', '175 Tây Sơn'),
+(6, 'Khoa Kinh Te', '147.258.369', '175 Tây Sơn'),
+(7, 'Khoa Biển', '789.456.321', '175 Tây Sơn'),
+(8, 'Khoa Môi Trường', '159.357.846', '175 Tây Sơn');
 
 --
 -- Indexes for dumped tables
@@ -125,7 +130,7 @@ ALTER TABLE `tbl_khoa`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_giangvien`
@@ -137,7 +142,7 @@ ALTER TABLE `tbl_giangvien`
 -- AUTO_INCREMENT for table `tbl_khoa`
 --
 ALTER TABLE `tbl_khoa`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
